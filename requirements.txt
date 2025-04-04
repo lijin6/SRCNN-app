@@ -1,0 +1,10 @@
+Flask
+Flask-Login
+PyMySQL
+Pillow
+numpy
+torch
+h5py
+tqdm
+opencv-python
+python-dotenv

@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% block title %}登录 - SRCNN超分辨率系统{% endblock %}
+
+{% block content %}
+<div class="container d-flex justify-content-center align-items-center" style="min-height: 80vh;">
+    <div class="col-md-6 col-lg-4">
+        <div class="card shadow">
+            <div class="card-header bg-primary text-white py-3">  <!-- 添加蓝色背景标题栏 -->
+                <h4 class="mb-0 text-center">用户登录</h4>  <!-- 改为h4保持一致性 -->
+            </div>
+            <div class="card-body p-4">
+                {% if message %}
+                <div class="alert alert-danger">{{ message }}</div>
+                {% endif %}
+                
+                <form method="POST">
+                    <div class="mb-3">
+                        <label for="username" class="form-label">用户名</label>
+                        <input type="text" class="form-control" id="username" name="username" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="password" class="form-label">密码</label>
+                        <input type="password" class="form-control" id="password" name="password" required>
+                    </div>
+                    <div class="d-grid gap-2">
+                        <button type="submit" class="btn btn-primary">登录</button>
+                    </div>
+                </form>
+                
+                <div class="mt-3 text-center">
+                    <p>还没有账号？<a href="{{ url_for('auth.register') }}">立即注册</a></p>
+                    <p><a href="#">忘记密码？</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

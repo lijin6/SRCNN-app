@@ -1,0 +1,119 @@
+{% extends "base.html" %}
+
+{% block title %}联系我们 - SRCNN超分辨率系统{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-lg-8 mx-auto">
+            <h1 class="mb-4">联系我们</h1>
+            
+            <div class="card mb-4">
+                <div class="card-body">
+                    <h2 class="card-title">反馈与支持</h2>
+                    <p class="card-text">
+                        如果您在使用SRCNN超分辨率系统时遇到任何问题，或有任何建议和反馈，
+                        请通过以下方式联系我们。我们将尽快回复您。
+                    </p>
+                    
+                    <div class="row mt-4">
+                        <div class="col-md-6">
+                            <div class="card mb-3">
+                                <div class="card-body text-center">
+                                    <i class="bi bi-envelope-fill feature-icon"></i>
+                                    <h5>电子邮件</h5>
+                                    <p>support@srcnn-sr.com</p>
+                                    <a href="mailto:support@srcnn-sr.com" class="btn btn-outline-primary">发送邮件</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card mb-3">
+                                <div class="card-body text-center">
+                                    <i class="bi bi-chat-left-text-fill feature-icon"></i>
+                                    <h5>在线支持</h5>
+                                    <p>周一至周五 9:00-18:00</p>
+                                    <a href="#" class="btn btn-outline-primary">开始聊天</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card mb-4">
+                <div class="card-body">
+                    <h2 class="card-title">提交反馈表单</h2>
+                    <form>
+                        <div class="mb-3">
+                            <label for="name" class="form-label">您的姓名</label>
+                            <input type="text" class="form-control" id="name" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">电子邮件</label>
+                            <input type="email" class="form-control" id="email" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="subject" class="form-label">主题</label>
+                            <select class="form-select" id="subject">
+                                <option value="question">问题咨询</option>
+                                <option value="feedback">功能建议</option>
+                                <option value="bug">错误报告</option>
+                                <option value="other">其他</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="message" class="form-label">详细内容</label>
+                            <textarea class="form-control" id="message" rows="5" required></textarea>
+                        </div>
+                        <div class="mb-3">
+                            <label for="attachment" class="form-label">附件（可选）</label>
+                            <input class="form-control" type="file" id="attachment">
+                            <div class="form-text">您可以上传相关截图或文件帮助我们理解您的问题</div>
+                        </div>
+                        <button type="submit" class="btn btn-primary">提交反馈</button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="card mb-4">
+                <div class="card-body">
+                    <h2 class="card-title">开发团队</h2>
+                    <div class="row">
+                        <div class="col-md-4 mb-3">
+                            <div class="card h-100">
+                                <img src="https://via.placeholder.com/300x200?text=团队成员1" class="card-img-top" alt="团队成员">
+                                <div class="card-body">
+                                    <h5 class="card-title">张教授</h5>
+                                    <p class="card-text">首席研究员</p>
+                                    <p class="card-text"><small class="text-muted">计算机视觉专家</small></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <div class="card h-100">
+                                <img src="https://via.placeholder.com/300x200?text=团队成员2" class="card-img-top" alt="团队成员">
+                                <div class="card-body">
+                                    <h5 class="card-title">李博士</h5>
+                                    <p class="card-text">算法工程师</p>
+                                    <p class="card-text"><small class="text-muted">深度学习专家</small></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <div class="card h-100">
+                                <img src="https://via.placeholder.com/300x200?text=团队成员3" class="card-img-top" alt="团队成员">
+                                <div class="card-body">
+                                    <h5 class="card-title">王工程师</h5>
+                                    <p class="card-text">全栈开发</p>
+                                    <p class="card-text"><small class="text-muted">系统架构师</small></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,170 @@
+{% extends "base.html" %}
+
+{% block title %}使用教程 - SRCNN超分辨率系统{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-lg-8 mx-auto">
+            <h1 class="mb-4">SRCNN超分辨率系统使用教程</h1>
+            
+            <div class="card mb-4">
+                <div class="card-body">
+                    <h2 class="card-title">快速开始</h2>
+                    <ol>
+                        <li class="mb-3">
+                            <h5>上传图像</h5>
+                            <p>点击"选择文件"按钮，从您的设备中选择一张低分辨率图像。系统支持JPG、PNG等多种常见图像格式。</p>
+                            <img src="https://via.placeholder.com/800x200?text=上传图像截图" class="img-fluid rounded" alt="上传图像">
+                        </li>
+                        <li class="mb-3">
+                            <h5>选择放大倍数</h5>
+                            <p>从下拉菜单中选择您希望的放大倍数（2倍、3倍或4倍）。</p>
+                            <img src="https://via.placeholder.com/800x200?text=选择放大倍数截图" class="img-fluid rounded" alt="选择放大倍数">
+                        </li>
+                        <li class="mb-3">
+                            <h5>开始处理</h5>
+                            <p>点击"开始处理"按钮，系统将使用SRCNN模型对您的图像进行超分辨率处理。</p>
+                            <img src="https://via.placeholder.com/800x200?text=开始处理截图" class="img-fluid rounded" alt="开始处理">
+                        </li>
+                        <li class="mb-3">
+                            <h5>查看和下载结果</h5>
+                            <p>处理完成后，您将看到原始图像和处理后的图像对比。点击"下载结果"按钮保存超分辨率图像。</p>
+                            <img src="https://via.placeholder.com/800x200?text=结果对比截图" class="img-fluid rounded" alt="结果对比">
+                        </li>
+                    </ol>
+                </div>
+            </div>
+            
+            <div class="card mb-4">
+                <div class="card-body">
+                    <h2 class="card-title">最佳实践</h2>
+                    <div class="accordion" id="bestPractices">
+                        <div class="accordion-item">
+                            <h3 class="accordion-header" id="headingOne">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
+                                    如何选择最佳放大倍数?
+                                </button>
+                            </h3>
+                            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne">
+                                <div class="accordion-body">
+                                    <p>放大倍数的选择取决于原始图像的质量和您的需求：</p>
+                                    <ul>
+                                        <li><strong>2倍放大</strong>：适用于大多数情况，提供良好的细节恢复和自然的外观</li>
+                                        <li><strong>3倍放大</strong>：当您需要更大的放大倍数但仍希望保持图像质量时</li>
+                                        <li><strong>4倍放大</strong>：最大放大倍数，可能适合某些特定场景，但可能会引入一些伪影</li>
+                                    </ul>
+                                    <p>建议尝试不同的放大倍数，选择最适合您需求的结果。</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h3 class="accordion-header" id="headingTwo">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
+                                    什么样的图像效果最好?
+                                </button>
+                            </h3>
+                            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo">
+                                <div class="accordion-body">
+                                    <p>SRCNN在以下类型的图像上表现最佳：</p>
+                                    <ul>
+                                        <li>清晰但分辨率低的图像（如缩小的照片）</li>
+                                        <li>包含丰富纹理和边缘的图像（如建筑、风景）</li>
+                                        <li>光照条件良好的图像</li>
+                                    </ul>
+                                    <p>效果可能不太理想的图像：</p>
+                                    <ul>
+                                        <li>严重模糊或失焦的图像</li>
+                                        <li>极低分辨率的图像（如小于100×100像素）</li>
+                                        <li>高噪声或压缩伪影严重的图像</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h3 class="accordion-header" id="headingThree">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree">
+                                    如何获得最佳结果?
+                                </button>
+                            </h3>
+                            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree">
+                                <div class="accordion-body">
+                                    <p>为了获得最佳的超分辨率结果，请考虑以下建议：</p>
+                                    <ol>
+                                        <li>使用最高质量的原始图像（即使分辨率低）</li>
+                                        <li>避免过度压缩的JPEG图像</li>
+                                        <li>对于彩色图像，确保颜色平衡良好</li>
+                                        <li>处理前可以适当调整图像的对比度和亮度</li>
+                                        <li>对于特别重要的图像，尝试不同的放大倍数并比较结果</li>
+                                    </ol>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card mb-4">
+                <div class="card-body">
+                    <h2 class="card-title">常见问题</h2>
+                    <div class="accordion" id="faqAccordion">
+                        <div class="accordion-item">
+                            <h3 class="accordion-header" id="faqHeadingOne">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseOne">
+                                    处理一张图像需要多长时间?
+                                </button>
+                            </h3>
+                            <div id="faqCollapseOne" class="accordion-collapse collapse show" aria-labelledby="faqHeadingOne">
+                                <div class="accordion-body">
+                                    <p>处理时间取决于图像大小和放大倍数：</p>
+                                    <ul>
+                                        <li>500×500像素的图像：约5-10秒</li>
+                                        <li>1000×1000像素的图像：约15-30秒</li>
+                                        <li>更大的图像可能需要更长时间</li>
+                                    </ul>
+                                    <p>4倍放大的处理时间通常比2倍放长约50%。</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h3 class="accordion-header" id="faqHeadingTwo">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseTwo">
+                                    系统支持哪些图像格式?
+                                </button>
+                            </h3>
+                            <div id="faqCollapseTwo" class="accordion-collapse collapse" aria-labelledby="faqHeadingTwo">
+                                <div class="accordion-body">
+                                    <p>当前版本支持以下图像格式：</p>
+                                    <ul>
+                                        <li>JPEG (.jpg, .jpeg)</li>
+                                        <li>PNG (.png)</li>
+                                        <li>BMP (.bmp)</li>
+                                    </ul>
+                                    <p>未来版本可能会增加对更多格式的支持。</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h3 class="accordion-header" id="faqHeadingThree">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseThree">
+                                    处理后的图像会保存多久?
+                                </button>
+                            </h3>
+                            <div id="faqCollapseThree" class="accordion-collapse collapse" aria-labelledby="faqHeadingThree">
+                                <div class="accordion-body">
+                                    <p>出于隐私考虑，系统会自动定期清理上传和处理后的图像：</p>
+                                    <ul>
+                                        <li>上传的图像：保留7天</li>
+                                        <li>处理后的图像：保留30天</li>
+                                    </ul>
+                                    <p>建议及时下载您需要保存的处理结果。</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

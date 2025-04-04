@@ -1,0 +1,73 @@
+{% extends "base.html" %}
+
+{% block title %}用户注册 - SRCNN超分辨率系统{% endblock %}
+
+{% block content %}
+<div class="container d-flex justify-content-center align-items-center" style="min-height: 80vh;">
+    <div class="col-md-8 col-lg-5">  <!-- 调整宽度为col-lg-5，比登录页(col-lg-4)稍宽 -->
+        <div class="card shadow">
+            <div class="card-header bg-primary text-white py-3">  <!-- 减小header高度 -->
+                <h4 class="mb-0 text-center">用户注册</h4>  <!-- 从h3改为h4 -->
+            </div>
+            <div class="card-body p-4">
+                {% with messages = get_flashed_messages(with_categories=true) %}
+                    {% if messages %}
+                        {% for category, message in messages %}
+                            <div class="alert alert-{{ category }} alert-dismissible fade show mb-3">  <!-- 添加mb-3间距 -->
+                                {{ message }}
+                                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                            </div>
+                        {% endfor %}
+                    {% endif %}
+                {% endwith %}
+
+                <form method="POST" class="needs-validation" novalidate>
+                    <div class="mb-3">
+                        <label for="username" class="form-label">用户名</label>
+                        <input type="text" class="form-control" id="username" name="username" 
+                               pattern="^[A-Za-z0-9_]+$" required>
+                        <div class="invalid-feedback">
+                            请输入有效的用户名（只能包含字母、数字和下划线）
+                        </div>
+                        <div class="form-text">示例: kyrie_123</div>
+                    </div>
+                    
+                    <div class="mb-3">
+                        <label for="email" class="form-label">电子邮箱</label>
+                        <input type="email" class="form-control" id="email" name="email" required>
+                        <div class="invalid-feedback">
+                            请输入有效的电子邮箱地址
+                        </div>
+                    </div>
+                    
+                    <div class="mb-3">  <!-- 从mb-4改为mb-3 -->
+                        <label for="password" class="form-label">密码</label>
+                        <input type="password" class="form-control" id="password" name="password" 
+                               minlength="6" required>
+                        <div class="invalid-feedback">
+                            密码至少需要6个字符
+                        </div>
+                        <div class="form-text">建议使用字母、数字和特殊字符的组合</div>
+                    </div>
+                    
+                    <div class="d-grid gap-2 mt-4">  <!-- 添加mt-4顶部间距 -->
+                        <button type="submit" class="btn btn-primary">
+                            <i class="bi bi-person-plus"></i> 立即注册
+                        </button>
+                    </div>
+                </form>
+                
+                <hr class="my-3">  <!-- 减小hr间距 -->
+                
+                <div class="text-center">
+                    <p class="mb-0">已有账号？ 
+                        <a href="{{ url_for('auth.login') }}" class="text-decoration-none">
+                            <i class="bi bi-box-arrow-in-right"></i> 立即登录
+                        </a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,95 @@
+{% extends "base.html" %}
+
+{% block title %}关于我们 - SRCNN超分辨率系统{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-lg-8 mx-auto">
+            <h1 class="mb-4">关于SRCNN超分辨率系统</h1>
+            
+            <div class="card mb-4">
+                <div class="card-body">
+                    <h2 class="card-title">什么是SRCNN?</h2>
+                    <p class="card-text">
+                        SRCNN (Super-Resolution Convolutional Neural Network) 是一种基于深度学习的超分辨率技术，
+                        它能够通过学习低分辨率图像与高分辨率图像之间的映射关系，将低分辨率图像转换为高分辨率图像。
+                    </p>
+                    <p class="card-text">
+                        我们的系统实现了SRCNN模型，提供了2倍、3倍和4倍的超分辨率功能，能够显著提升图像质量，
+                        适用于各种需要高清图像的场景。
+                    </p>
+                </div>
+            </div>
+            
+            <div class="card mb-4">
+                <div class="card-body">
+                    <h2 class="card-title">技术特点</h2>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">
+                            <i class="bi bi-check-circle-fill text-success me-2"></i>
+                            基于深度学习的超分辨率技术
+                        </li>
+                        <li class="list-group-item">
+                            <i class="bi bi-check-circle-fill text-success me-2"></i>
+                            支持2×、3×、4×三种放大倍数
+                        </li>
+                        <li class="list-group-item">
+                            <i class="bi bi-check-circle-fill text-success me-2"></i>
+                            处理速度快，效果显著
+                        </li>
+                        <li class="list-group-item">
+                            <i class="bi bi-check-circle-fill text-success me-2"></i>
+                            支持多种常见图像格式
+                        </li>
+                        <li class="list-group-item">
+                            <i class="bi bi-check-circle-fill text-success me-2"></i>
+                            用户友好的Web界面
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="card mb-4">
+                <div class="card-body">
+                    <h2 class="card-title">应用场景</h2>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="card mb-3">
+                                <div class="card-body">
+                                    <h5 class="card-title"><i class="bi bi-camera me-2"></i>摄影</h5>
+                                    <p class="card-text">提升老照片或低分辨率照片的质量</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card mb-3">
+                                <div class="card-body">
+                                    <h5 class="card-title"><i class="bi bi-film me-2"></i>视频</h5>
+                                    <p class="card-text">提升视频帧的分辨率</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card mb-3">
+                                <div class="card-body">
+                                    <h5 class="card-title"><i class="bi bi-badge-hd me-2"></i>监控</h5>
+                                    <p class="card-text">增强监控视频的清晰度</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card mb-3">
+                                <div class="card-body">
+                                    <h5 class="card-title"><i class="bi bi-image me-2"></i>医学影像</h5>
+                                    <p class="card-text">提高医学图像的清晰度</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
